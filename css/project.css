@@ -1,8 +1,10 @@
 :root {
     --color-text-primary: #ccc;
+    --color-text-secondary: #ccccccbd;
     --color-background-primary: #303030;
     --color-background-secondary: #666666;
     --color-highlight: #FFA1A5;
+    --color-highlight-var: #ff636b;
 }
 
 #title {
@@ -44,15 +46,60 @@ h1 {
     border-radius: 4px;
 }
 
+.back-home {
+    font-size: clamp(7pt, 2vw, 15pt);
+    position: fixed;
+    top: 1vw;
+    left: 2vw;
+    color: var(--color-text-secondary);
+    border-color: var(--color-text-secondary);
+    z-index: 1000;
+    margin: 0;
+}
+
+.back-home:hover {
+    background-color: var(--color-highlight);
+    border-color: var(--color-highlight);
+}
+
+.back-home:active {
+    background-color: var(--color-highlight)!important;
+    border-color: var(--color-highlight) !important;
+    color:var(--color-background-primary) !important
+}
+
+.bottom-container {
+    border-radius: 4px;
+    container-type: inline-size;    
+    height: 10vh;
+    max-width: 100%;
+    background-color: rgb(35, 35, 35);}
+
+.bottom-button {
+    border-radius: 2px;
+    font-weight: 700;
+    color: var(--color-highlight);
+    border-color: var(--color-highlight);
+    font-size: 15pt;
+    position: static;
+    left: 0;
+    top: 0;
+}
+
+.bottom-button:hover {
+    background-color: var(--color-highlight-var);
+    border-color: var(--color-highlight-var);
+    color: var(--color-background-primary);
+
+}
+
 
 @media (min-width: 768px) {
     .group-explanations {
         margin-top: 0;
     }
+
+
 }
 
-/* @media (min-width: 1200px) {
-    #title {
-        width: 468px;
-    }
-} */
+

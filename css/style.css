@@ -7,11 +7,13 @@
 }
 
 :root {
-  --color-text-primary: #ccc;
-  --color-background-primary: #303030;
-  --color-background-secondary: #666666;
-  --color-highlight: #FFA1A5;
+    --color-text-primary: #ccc;
+    --color-background-primary: #303030;
+    --color-background-secondary: #666666;
+    --color-highlight: #FFA1A5;
+    --color-highlight-var: ##FF636B
 }
+
 
 #main-content-container {
     max-width: 90%;
@@ -115,7 +117,9 @@ hr {
 
     #main-content-container {
         max-width: none;
-        min-width: 660px; /* allows for smooth transition 691.2 = 768 * 0.9, for some reason, there is still a jump with value so i took off 32 and it's good enough probaly a problem with the margins*/
+        min-width: 660px; /* allows for smooth transition 691.2 = 768 * 0.9, (because main-container is 90% until md breakpoint)
+        for some reason, there is still a jump with value so i took off 32 
+        and it's good enough probaly a problem with the margins*/
         width: 66%;
     }
 
