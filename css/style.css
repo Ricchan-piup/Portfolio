@@ -43,19 +43,20 @@ hr {
 }
 
 #collection {
-    max-width: 90%;
+    max-width: 85%;
     margin-inline: auto;
 }
 
 
-.card-container:hover {
-    filter: drop-shadow(0 5px 10px rgba(154, 160, 185, .35));
-    transform: scale(1.05);
-}
-
+/* GAME CARD BEGINNING */
 .card-container {
     transition: transform 0.3s ease-in-out;
     container-type: inline-size;
+}
+
+.card-container:hover {
+    filter: drop-shadow(0 0px 1vw var(--color-highlight));
+    transform: scale(1.05);
 }
 
 .card {
@@ -96,6 +97,7 @@ hr {
     font-size: 8cqi;
     font-weight: 900;
     padding-bottom: 0;
+    margin-top: 2cqi;
     margin-bottom: 1cqi;
 }
 
@@ -103,12 +105,17 @@ hr {
     font-size: 5cqi;
     line-height: normal;
 }
+/* GAME CARD END */
 
 
 @media (min-width: 768px) {
  #main-content-container {
     max-width: 75%;
     margin-inline: auto;
+  }
+
+  #collection {
+    max-width: 100%;
   }
 }
 
