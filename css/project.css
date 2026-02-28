@@ -8,24 +8,30 @@
 #title {
     width: 50%;
     margin-inline: auto;
+    container-type: inline-size;
 }
 
-
 .card-container {
-    all: unset;
-    padding: 5rem;
-    filter: drop-shadow(1em 1em 0.2rem var(--color-background-primary))!important; 
+    /* all: unset; */
+    container-type: inline-size;
+    padding-top: 10cqi;
+    padding-bottom: 10cqi;
+    filter: drop-shadow(4cqi 5cqi 2cqi var(--color-background-primary))!important; 
+}
+
+.card-container:hover {
+    transform: none;
 }
 
 
 .card {
-    width: 90%;
+    width: 80%;
     margin-inline: auto;
     margin-bottom: 0;
 }
 
 h1 {
-    font-size: 20cqi;
+    font-size: 15cqi;
     font-weight: 900;
     filter: drop-shadow(2px 2px 0.1rem var(--color-highlight));
 }
