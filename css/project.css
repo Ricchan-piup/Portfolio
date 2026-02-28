@@ -1,0 +1,45 @@
+:root {
+    --color-text-primary: #ccc;
+    --color-background-primary: #303030;
+    --color-background-secondary: #666666;
+    --color-highlight: #FFA1A5;
+}
+
+#title {
+    width: 50%;
+    margin-inline: auto;
+}
+
+
+.card-container {
+    all: unset;
+    padding: 5rem;
+    filter: drop-shadow(1em 1em 0.2rem var(--color-background-primary))!important; 
+}
+
+
+.card {
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 20cqi;
+    font-weight: 900;
+    filter: drop-shadow(2px 2px 0.1rem var(--color-highlight));
+}
+
+.group-img {
+    width: 100%;
+    display: block;
+    object-fit: fill;
+    border-radius: 4px;
+}
+
+
+@media (min-width: 768px) {
+    .group-explanations {
+        margin-top: 0;
+    }
+}
