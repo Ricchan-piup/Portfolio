@@ -13,6 +13,10 @@
   --color-highlight: #FFA1A5;
 }
 
+#main-content-container {
+    max-width: 90%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   color: var(--color-highlight);
@@ -107,24 +111,21 @@ hr {
 }
 /* GAME CARD END */
 
-
 @media (min-width: 768px) {
- #main-content-container {
-    max-width: 75%;
-    margin-inline: auto;
-  }
+
+    #main-content-container {
+        max-width: none;
+        min-width: 660px; /* allows for smooth transition 691.2 = 768 * 0.9, for some reason, there is still a jump with value so i took off 32 and it's good enough probaly a problem with the margins*/
+        width: 66%;
+    }
 
   #collection {
-    max-width: 100%;
+    max-width: 90%;
   }
 }
 
-@media (min-width: 992px) {
-    #main-content-container {
-        max-width: 66%;
-        margin-inline: auto;
-    }
-}
+
+
 
 
 

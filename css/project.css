@@ -6,6 +6,7 @@
 }
 
 #title {
+    width: 468px;
     width: 50%;
     margin-inline: auto;
     container-type: inline-size;
@@ -49,3 +50,9 @@ h1 {
         margin-top: 0;
     }
 }
+
+/* @media (min-width: 1200px) {
+    #title {
+        width: 468px;
+    }
+} */
