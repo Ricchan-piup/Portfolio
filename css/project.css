@@ -5,6 +5,13 @@
     --color-background-secondary: #666666;
     --color-highlight: #FFA1A5;
     --color-highlight-var: #ff636b;
+    --color-hihlight-yellow: #fc3;
+    --color-highlight-blue: #7cf
+}
+
+span {
+    color: var(--color-hihlight-yellow);
+    font-weight: 700;
 }
 
 #title {
@@ -26,7 +33,6 @@
     transform: none;
 }
 
-
 .card {
     width: 80%;
     margin-inline: auto;
@@ -37,6 +43,13 @@ h1 {
     font-size: 15cqi;
     font-weight: 900;
     filter: drop-shadow(2px 2px 0.1rem var(--color-highlight));
+}
+
+.embed-responsive-item {
+    aspect-ratio: 1.5/1;
+    width: 80%;
+    height: 100%;
+    border: none;
 }
 
 .group-img {
@@ -99,6 +112,9 @@ h1 {
         margin-top: 0;
     }
 
+        .group-explanations p {
+            text-align: justify;
+        }
 
 }
 
