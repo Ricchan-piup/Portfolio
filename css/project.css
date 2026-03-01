@@ -122,16 +122,24 @@ h1 {
 
 }
 
-.carousel-item {
-    /* width: 85%; */
-    /* margin-inline: auto; */
+.img-fluid {
+    height: 50%;
+}
+
+.carousel-item img {
+    cursor: pointer;
 } 
 
 .carousel-item img {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
     object-fit: cover;
 }
+
+.carousel-item {
+    aspect-ratio: 16 / 9;
+}
+
 
 @media (min-width: 768px) {
     .group-explanations {
@@ -142,10 +150,7 @@ h1 {
             text-align: justify;
         }
 
-                .carousel-item img {
-                    aspect-ratio: 16/9;
 
-                }
 
 }
 

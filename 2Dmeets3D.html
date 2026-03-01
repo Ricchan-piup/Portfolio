@@ -47,7 +47,8 @@
                 target="_blank">playlist</a></p>
         <p>Here is a collection of screenshots of the project: (please click on the <span>left</span> and
             <span>right</span> of the image to
-            navigate)</p>
+            navigate)
+        </p>
         <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
 
             <!-- Slides -->
@@ -76,11 +77,13 @@
             </div>
 
             <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev"
+                aria-label="previous">
                 <span class="carousel-control-prev-icon"></span>
             </button>
 
-            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next"
+                aria-label="next">
                 <span class="carousel-control-next-icon"></span>
             </button>
 
@@ -90,23 +93,69 @@
 
         <section id="process">
             <h3>Process</h3>
-            <p>I will now go over a few challenges I encountered while making this project. If you want to see the full
-                code of the game, you can find it on my <a class="link"
-                    href="https://github.com/Ricchan-piup/0froppy.git" target="_blank">GitHub repository</a>. </p>
+            <p>I will now go over my process and the challenges I encountered while making this project. You find the f,
+                you can find it on my <a class="link" href="https://github.com/Ricchan-piup/0froppy.git"
+                    target="_blank">GitHub repository</a>. </p>
 
             <div class="info-group row g-4 mb-5 align-items-center">
 
                 <!-- TEXT -->
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-1">
                     <h5 class="mt-5">Procedural landscaping</h5>
-                    <p>I made all the landscaping using unreal procedural tools. My goal was to set up a believable environment that combined 2D and 3D assets.</p>
-                    <p>First, I made a custom material that dynamically adapts to terrain slope, grass for flat surfaces, and rock for steeper inclines</p>
-                    <p>Secondly, I terraformed the map. I used Bezier-based spline brushes to define terrain contours manually and then played with the noise and erosion parameter of the terrain to give it an organic feeling. This allowed me to create a controlled chaos that mimics nature’s behavior.</p> <p>Finally, I used procedural foliage to decorate my map with 2D and 3D assets. To integrate naturally my 2D assets</p>
+                    <p>I made all the landscaping using unreal procedural tools. My goal was to set up a believable
+                        environment that combined 2D and 3D assets.</p>
+                    <p>First, I made a custom material that dynamically adapts to terrain slope, grass for flat
+                        surfaces, and rock for steeper inclines. You can see the blueprint of this material on the
+                        corresponding image of the opposite carousel and a demonstration in this <a class="link"
+                            href="https://www.youtube.com/watch?v=SYeFCA-kebU&list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy&index=6"
+                            target="_blank">video</a>. </p>
+                    <p>Secondly, I terraformed the map. I used Bezier-based spline brushes to define terrain contours
+                        manually and then played with the noise and erosion parameter of the terrain to give it an
+                        organic feeling. This allowed me to create a controlled chaos that mimics nature’s behavior.</p>
+                    <p>Finally, I used procedural foliage to decorate my map with 2D and 3D assets. To integrate
+                        naturally my 2D assets. You can see a demonstration of the foliage in this <a class="link"
+                            href="https://www.youtube.com/watch?v=7ppP19AGxuw&list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy&index=4"
+                            target="_blank">video</a> and how I gave it a billboard effect on the corresponding
+                        blueprint in the carousel.</p>
                 </div>
 
                 <!-- IMAGE -->
                 <div class="col-12 col-md-6 order-2 order-md-2">
-                    <img class="group-img img-fluid" src="assets/froppy/froppy-concept.png" alt="concept-illustration">
+                    <div id="blueprint-carousel" class="carousel slide" data-bs-ride="carousel">
+
+                        <!-- Slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/2D-meets-3D/blueprints/foliage.png" class="d-block w-100"
+                                    data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="0"
+                                    alt="foliage-blueprint">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Blueprint for adaptive texture</h5>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="assets/2D-meets-3D/blueprints/texture.png" class="d-block w-100"
+                                    data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="1"
+                                    alt="texture-blueprint">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Blueprint for billboard foliage</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#blueprint-carousel"
+                            data-bs-slide="prev" aria-label="Previous">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#blueprint-carousel"
+                            data-bs-slide="next" aria-label="Next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
                 </div>
 
             </div>
@@ -129,7 +178,7 @@
 
                 <!-- IMAGE -->
                 <div class="col-12 col-md-6 order-2 order-md-1">
-                    <img class="group-img img-fluid" src="assets/froppy/froppy-graphics.png" alt="sprites-screenshot">
+
                 </div>
 
             </div>
@@ -165,6 +214,42 @@
             <a class="btn back-home bottom-button" href="index.html">See Another Project</a>
         </div>
     </div>
+
+    <!-- Blueprint carousel -->
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-dark">
+
+                <div class="modal-body p-0">
+
+                    <div id="modalCarousel" class="carousel slide">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/2D-meets-3D/blueprints/foliage.png" class="d-block w-100"
+                                    alt="foliage-blueprint">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="assets/2D-meets-3D/blueprints/texture.png" class="d-block w-100"
+                                    alt="texture-blueprint">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel"
+                            data-bs-slide="prev" aria-label="previous"></button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel"
+                            data-bs-slide="next" aria-label="next"></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
