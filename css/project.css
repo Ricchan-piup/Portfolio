@@ -21,6 +21,27 @@ span {
     container-type: inline-size;
 }
 
+h1 {
+    font-weight: 900;
+    filter: drop-shadow(2px 2px 0.1rem var(--color-highlight));
+}
+
+.short-title {
+    font-size: 12cqi !important;
+}
+
+.medium-title {
+    font-size: 9cqi !important;
+}
+
+.long-title {
+    font-size: 8cqi !important;
+}
+
+.one-line {
+    margin-top: 3cqi;
+}
+
 .card-container {
     /* all: unset; */
     container-type: inline-size;
@@ -39,11 +60,6 @@ span {
     margin-bottom: 0;
 }
 
-h1 {
-    font-size: 15cqi;
-    font-weight: 900;
-    filter: drop-shadow(2px 2px 0.1rem var(--color-highlight));
-}
 
 .embed-responsive-item {
     aspect-ratio: 1.5/1;
