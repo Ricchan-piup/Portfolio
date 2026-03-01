@@ -21,7 +21,7 @@
 }
 
 #main-content-container {
-    max-width: 90%;
+    margin: clamp(16, 1vw, 20)px auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
