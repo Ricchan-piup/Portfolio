@@ -37,25 +37,24 @@
             <h3>Project Description</h3>
             <p>
                 2D meets 3D is a project that explores the combination of 2D and 3D visual elements in a single
-                game-environment made on Unreal Engine 5. My goal was to create an interesting visual experience
-                combining both 2D and 3D elements and taking advantage of the strengths of each.
+                game environment made in Unreal Engine 5. My goal was to create an interesting visual experience
+                combining both 2D and 3D elements while taking advantage of the strengths of each.
             </p>
 
             <p>
-                To make this project I used free assets from the Unreal Engine Marketplace (3D assets) and itch.io (2D
+                To make this project, I used free assets from the Unreal Engine Marketplace (3D assets) and itch.io (2D
                 assets).
             </p>
         </section>
         <h3>Demonstration</h3>
-        <p> 
-            Although there is no playable version of this project, you can see demonstration videos on this 
+        <p>
+            Although there is no playable version of this project, you can see demonstration videos on this
             <a class="link" href="https://www.youtube.com/playlist?list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy"
-                target="_blank">playlist</a>
+                target="_blank">playlist</a>.
         </p>
         <p>
-            Here is a collection of screenshots of the project: (please click on the <span>left</span> and
-            <span>right</span> of the image to
-            navigate)
+            Here is a collection of screenshots of the project (please click on the <span>left</span> and
+            <span>right</span> sides of the image to navigate).
         </p>
         <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -101,9 +100,12 @@
 
         <section id="process">
             <h3>Process</h3>
-            <p>I will now go over my process and the challenges I encountered while making this project. You can find the full unreal project on my <a class="link" href,
-                you can find it on my <a class="link" href="https://github.com/Ricchan-piup/0froppy.git"
-                    target="_blank">GitHub repository</a>. </p>
+            <p>
+                I will now go over my process and the challenges I encountered while making this project.
+                You can find the full Unreal project on my
+                <a class="link" href="https://github.com/Ricchan-piup/0froppy.git" target="_blank">GitHub
+                    repository</a>.
+            </p>
 
             <div class="info-group row g-4 mb-5 align-items-center">
 
@@ -111,97 +113,107 @@
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-1">
                     <h5 class="mt-5">Procedural landscaping</h5>
                     <p>
-                        I made all the landscaping using unreal procedural tools. My goal was to set up a believable
-                        environment that combined 2D and 3D assets.</p>
+                        I made all the landscaping using Unreal's procedural tools. My goal was to set up a believable
+                        environment that combined 2D and 3D assets.
+                    </p>
                     <p>
-                        First, I made a custom material that dynamically adapts to terrain slope, grass for flat
-                        surfaces, and rock for steeper inclines. You can see the blueprint of this material on the
-                        corresponding image of the opposite carousel and a demonstration in this <a class="link"
+                        First, I created a custom material that dynamically adapts to the terrain's slope: grass for
+                        flat
+                        surfaces and rock for steeper inclines. You can see the blueprint of this material in the
+                        corresponding
+                        image in the opposite carousel and a demonstration in this
+                        <a class="link"
                             href="https://www.youtube.com/watch?v=SYeFCA-kebU&list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy&index=6"
-                            target="_blank">video</a>. 
+                            target="_blank">video</a>.
                     </p>
                     <p>
                         Secondly, I terraformed the map. I used Bezier-based spline brushes to define terrain contours
-                        manually and then played with the noise and erosion parameter of the terrain to give it an
-                        organic feeling. This allowed me to create a controlled chaos that mimics nature’s behavior.
+                        manually and then adjusted the noise and erosion parameters to give it a more organic feel.
+                        This allowed me to create controlled chaos that mimics nature's behavior.
                     </p>
                     <p>
-                        Finally, I used procedural foliage to decorate my map with 2D and 3D assets. To integrate
-                        naturally my 2D assets. You can see a demonstration of the foliage in this <a class="link"
+                        Finally, I used procedural foliage to decorate the map with 2D and 3D assets.
+                        To integrate the 2D assets naturally, I gave them a billboard effect.
+                        You can see a demonstration of the foliage in this
+                        <a class="link"
                             href="https://www.youtube.com/watch?v=7ppP19AGxuw&list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy&index=4"
-                            target="_blank">video</a> and how I gave it a billboard effect on the corresponding
-                        blueprint in the carousel.
+                            target="_blank">video</a>
+                        and how I implemented the billboard effect in the corresponding blueprint in the carousel.
                     </p>
-                </div>
+</div>
+                    <!-- IMAGE -->
+                    <div class="col-12 col-md-6 order-2 order-md-2">
+                        <div id="blueprint-carousel" class="carousel slide text-center" data-bs-ride="carousel">
 
-                <!-- IMAGE -->
-                <div class="col-12 col-md-6 order-2 order-md-2">
-                    <div id="blueprint-carousel" class="carousel slide text-center" data-bs-ride="carousel">
+                            <!-- Slides -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/2D-meets-3D/blueprints/texture-1.png" class="d-block w-100"
+                                        data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="0"
+                                        alt="texture-blueprint-1/2">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Blueprint for adaptive texture 1/2</p>
+                                    </div>
+                                </div>
 
-                        <!-- Slides -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/2D-meets-3D/blueprints/texture-1.png" class="d-block w-100"
-                                    data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="0"
-                                    alt="texture-blueprint-1/2">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Blueprint for adaptive texture 1/2</p>
+                                <div class="carousel-item">
+                                    <img src="assets/2D-meets-3D/blueprints/texture-2.png" class="d-block w-100"
+                                        data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="1"
+                                        alt="texture-blueprint-2/2">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Blueprint for adaptive texture 2/2</p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="assets/2D-meets-3D/blueprints/foliage.png" class="d-block w-100"
+                                        data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="2"
+                                        alt="foliage-blueprint">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Blueprint for billboard foliage</p>
+                                    </div>
                                 </div>
                             </div>
+                            <p class="click-to-enlarge">(click to enlarge image)</p>
 
-                            <div class="carousel-item">
-                                <img src="assets/2D-meets-3D/blueprints/texture-2.png" class="d-block w-100"
-                                    data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="1"
-                                    alt="texture-blueprint-2/2">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Blueprint for adaptive texture 2/2</p>
-                                </div>
-                            </div>
+                            <!-- Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#blueprint-carousel"
+                                data-bs-slide="prev" aria-label="Previous">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
 
-                            <div class="carousel-item">
-                                <img src="assets/2D-meets-3D/blueprints/foliage.png" class="d-block w-100"
-                                    data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="2"
-                                    alt="foliage-blueprint">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Blueprint for billboard foliage</p>
-                                </div>
-                            </div>
+                            <button class="carousel-control-next" type="button" data-bs-target="#blueprint-carousel"
+                                data-bs-slide="next" aria-label="Next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+
                         </div>
-                        <p class="click-to-enlarge">(click to enlarge image)</p>
-
-                        <!-- Controls -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#blueprint-carousel"
-                            data-bs-slide="prev" aria-label="Previous">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-
-                        <button class="carousel-control-next" type="button" data-bs-target="#blueprint-carousel"
-                            data-bs-slide="next" aria-label="Next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-
                     </div>
+
                 </div>
-
-            </div>
-
             <div class="info-group row g-4 my-5 align-items-center">
 
                 <!-- TEXT -->
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-2">
                     <h5>Actors</h5>
                     <p>
-                        I decided to make the player and enemies 2D sprites to fully embrace the combination of 2D and
-                        3D. 
+                        I decided to make the player and enemies 2D sprites to fully embrace the combination of 2D
+                        and 3D.
                     </p>
                     <p>
-                        To make a smooth integration, the 2D sprites needed to always face the camera. I achieved this
-                        by modifying the master blueprint of the actor. However, simply forcing the characters to face
-                        the camera at all times would have felt unnatural and visually flat.
+                        To ensure smooth integration, the 2D sprites needed to always face the camera.
+                        I achieved this by modifying the master blueprint of the actor.
+                        However, simply forcing the characters to face the camera at all times would have felt
+                        unnatural and visually flat.
                     </p>
-                    <p> 
+                    <p>
+                        To solve this problem, I dynamically change which sprite is displayed (front, back, or side)
+                        based on the camera's position and the direction the actors are moving.
+                        You can see a demonstration of this in this
+                        <a class="link"
+                            href="https://www.youtube.com/watch?v=HLnInlFSaIs&list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy&index=5"
+                            target="_blank">video</a>.
                     </p>
-                        To solve this problem, I dynamically change which sprite must be displayed (front, back or side) based on the camera location and the direction the actors are going. You can see a demonstration of this on this <a class="link" href="https://www.youtube.com/watch?v=HLnInlFSaIs&list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy&index=5" target="_blank">video</a>
                 </div>
 
                 <!-- IMAGE -->
@@ -215,23 +227,39 @@
 
                 <!-- TEXT -->
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-1">
-                    <h5>Movement</h5>
+                    <h5>Bringing life to the environment</h5>
                     <p>
-                        I used Level Sequences and Niagara systems to add movement to the world. My goal was to bring life to the environment.
+                        I used Level Sequences and Niagara systems to add movement to the world.
+                        My goal was to bring life to the environment.
                     </p>
                     <p>
-                        I learned to use Niagara to create dynamic environmental effects such as the campfire and the water disturbed by the windmill. These effects respond to procedural parameters which allow me to simulate natural movement. 
+                        I learned to use Niagara to create dynamic environmental effects such as the campfire
+                        and the water disturbed by the windmill.
+                        These effects respond to procedural parameters, allowing me to simulate natural movement.
                     </p>
                     <p>
-                        Niagara systems helped me understand procedural methods better by forcing me to control randomness to reproduce natural phenomena. I wish to experiment more with VFX in the future and create more complex effects.
+                        Working with Niagara helped me better understand procedural methods by forcing me to control
+                        randomness
+                        in order to reproduce natural phenomena.
+                        I would like to experiment more with VFX in the future and create more complex effects.
                     </p>
-                    <p>In this <a class="link" href="https://youtu.be/1SJARxeZ5yg" target="_blank">video</a>, I demonstrate how I changed the radius of the spawn are of the particles to give an overall fire shape to the particle effect.</p>
-                        <p>In this <a class="link" href="https://youtu.be/AjAAK8vRxLI" target="_blank">video</a>, I demonstrate how I can modify the color of the particles based on the time since they spawned, to give a more natural feeling to the fire.</p>
+                    <p>
+                        In this <a class="link" href="https://youtu.be/1SJARxeZ5yg" target="_blank">video</a>,
+                        I demonstrate how I changed the radius of the particle spawn area to give the effect an
+                        overall fire shape.
+                    </p>
+                    <p>
+                        In this <a class="link" href="https://youtu.be/AjAAK8vRxLI" target="_blank">video</a>,
+                        I demonstrate how I modified the color of the particles based on the time since they
+                        spawned,
+                        creating a more natural-looking fire.
+                    </p>
                 </div>
 
                 <!-- IMAGE -->
                 <div class="col-12 col-md-6 order-2 order-md-2">
-                    <img class="group-img img-fluid" src="assets/2D-meets-3D/movement/movement-demo.gif" alt="sprites-screenshot">
+                    <img class="group-img img-fluid" src="assets/2D-meets-3D/movement/movement-demo.gif"
+                        alt="sprites-screenshot">
                 </div>
 
             </div>
