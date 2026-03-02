@@ -140,6 +140,24 @@ h1 {
     aspect-ratio: 16 / 9;
 }
 
+.carousel-caption {
+    background-color: #303030A0;
+    padding: 0px;
+    border-radius: 4px;
+}
+
+.carousel-caption p {
+    font-size: 11pt;
+    margin-top: 11pt;
+    color: var(--color-highlight);
+    font-weight: 700;
+}
+
+.click-to-enlarge {
+    font-size: 11pt;
+    color: var(--color-text-secondary);
+    margin-top: 5pt;
+}
 
 @media (min-width: 768px) {
     .group-explanations {
