@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math and Art</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="btn btn-outline-light back-home">← Back to Home</a>
+    </header>
+    <div id="main-content-container" class="container">
+        <div id="title" class="text-center">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img-container text-center">
+                        <img src="assets/thumbnails/math-and-art.png" class="card-img" alt="Project thumbnail">
+                    </div>
+                    <div class="card-text-container">
+                        <h1 class="medium-title two-line">MATH AND ART</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <section id="introduction">
+            <h3>Project Description</h3>
+            <p>
+                Math And Art is a 3D visual experience created in PICO-8 that relies heavily on mathematics. Since
+                PICO-8 does not have any built-in native 3D functionality, my goal was to understand how to create 3D
+                visuals using only very basic tools. </p>
+            <h3>Demonstration</h3>
+            <p>You can try the experience directly in the web browser below. Use the <span>directional arrow</span> keys
+                to interact with the 3D object. Enjoy!</p>
+            <div class="container text-center">
+                <iframe title="Math and Art" src="../games/math-and-art.html" class="embed-responsive-item"></iframe>
+            </div>
+        </section>
+
+        <hr class="my-4">
+
+        <section id="process">
+            <h3>Process</h3>
+            <p>Having never taken a computer graphics class before, I studied other 3D projects created in the PICO-8
+                community to understand how developers create the illusion of three-dimensional objects on a flat
+                screen. If you wish to see the complete code, you can check out my <a class="link"
+                    href="https://github.com/Ricchan-piup/Math-and-Art.git" target="_blank">GitHub repository</a>.</p>
+
+            Here are the main ideas I focused on to make this experience work.</p>
+            <div class="info-group row g-4 mb-5 align-items-center">
+
+                <!-- TEXT -->
+                <div class="group-explanations col-12 col-md-6 order-1 order-md-1">
+                    <h5 class="mt-5">Defining a 3D Shape</h5>
+                    <p>To define the spinning-top-like shape, I used mathematics to procedurally generate the object.
+                        The object is really a set of points whose coordinates are defined using polar coordinates.</p>
+                    <p> The shape is divided into two parts: a cone and a sphere. The main idea used to define these
+                        shapes is that both can be viewed as stacks of circular disks with varying radii. By
+                        progressively changing the radius of each disk, it is possible to generate the geometry of the
+                        sphere and the cone and combine them into one single object.</p>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="col-12 col-md-6 order-2 order-md-2">
+                    <img class="group-img img-fluid" src="assets/math-and-art/slices.png" alt="slices-method-illustration">
+                </div>
+
+            </div>
+
+            <div class="info-group row g-4 my-5 align-items-center">
+
+                <!-- TEXT -->
+                <div class="group-explanations col-12 col-md-6 order-1 order-md-2">
+                    <h5>Giving the Impression of Depth</h5>
+                    <p>
+                        Another challenge was giving the impression of depth on a 2D screen. Even though each point in the object has three coordinates (x,y,z), the screen can only display two dimensions.
+                    </p>
+                    <p> 
+                        To solve this, I needed an algorithm that would allow points closer to the viewer to be drawn in front of the others. The solution was to sort the points according to their z-coordinate before drawing them. Points with larger z-values are drawn after the others, which makes them appear on top.
+                    </p>
+                    <p>
+                        In addition, the dots need to appear smaller the farther they are from the viewer. To achieve this effect, each point stores a size variable that depends on its z-coordinate. This size is updated every frame based on the point's depth.
+                    </p>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="col-12 col-md-6 order-2 order-md-1">
+                    <img class="group-img img-fluid" src="assets/math-and-art/depth.png" alt="depth-code-screenshot">
+                </div>
+
+            </div>
+
+            <div class="info-group row g-4 my-5 align-items-center">
+
+                <!-- TEXT -->
+                <div class="group-explanations col-12 col-md-6 order-1 order-md-1">
+                    <h5>3D Rotation</h5>
+                    <p>In order to make the object appear to spin, I needed a way to rotate its points in three dimensions. I implemented this by updating the coordinates of the points that make up the object over time.</p>
+                    <p>To achieve this, I used mathematical rotation formulas based on trigonometric functions. Instead of implementing a direct 3D rotation, I used a simpler approach by applying two successive 2D rotations. First, the points are rotated in the x–z plane, which makes the object spin horizontally. Then, they are rotated in the y–z plane, which tilts the object vertically.</p>
+                    <p>By updating these rotations every frame, the object appears to rotate smoothly in three-dimensions</p>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="col-12 col-md-6 order-2 order-md-2">
+                    <img class="group-img img-fluid" src="assets/math-and-art/rotate.png" alt="rotation-code-screenshot">
+                </div>
+
+            </div>
+        </section>
+        <hr class="my-4">
+        <div class="d-flex align-items-center justify-content-center bottom-container">
+            <a class="btn back-home bottom-button" href="index.html">See Another Project</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
