@@ -141,10 +141,6 @@ h1 {
     aspect-ratio: 1/1 !important;
 }
 
-.carousel-item {
-    aspect-ratio: 1/1;
-}
-
 .carousel-caption {
     background-color: #303030A0;
     padding: 0px;

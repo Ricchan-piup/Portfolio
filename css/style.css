@@ -128,8 +128,7 @@ hr {
     #main-content-container {
         max-width: none;
         min-width: 745px; /* allows for smooth transition 691.2 = 768 * 0.9, (because main-container is 90% until md breakpoint)
-        for some reason, there is still a jump with value so i took off 32 
-        and it's good enough probaly a problem with the margins*/
+        for some reason, there is still a jump with value so i took off 32 now and it's good enough probably a problem with the margins*/
         width: 66%;
     }
 
