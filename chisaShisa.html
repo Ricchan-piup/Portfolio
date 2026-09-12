@@ -50,7 +50,7 @@
         <p>
             Please take a look at the model in different colors down here. You can get
             more insight on how I made it by checking this
-            <a class="link" href="https://www.youtube.com/playlist?list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy"
+            <a class="link" href="https://www.youtube.com/playlist?list=PLc87wuQ7K5KE"
                 target="_blank">playlist</a>.
         </p>
         <div class="">
@@ -139,30 +139,21 @@
 
                 <!-- TEXT -->
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-2">
-                    <h5>Actors</h5>
+                    <h5>3D Modeling</h5>
                     <p>
-                        I decided to make the player and enemies 2D sprites to fully embrace the combination of 2D
-                        and 3D.
+                        The model was made by combining simple shapes together. The order in which the shapes were assembled is not the same, the video named "Construction" right here should give you an idea of how the 3D model was realized. I used blender's modifiers to add geometry and add constraints to keep the eyes stuck to the head surface, and be able to animate them later.
                     </p>
                     <p>
-                        To ensure smooth integration, the 2D sprites needed to always face the camera.
-                        I achieved this by modifying the master blueprint of the actor.
-                        However, simply forcing the characters to face the camera at all times would have felt
-                        unnatural and visually flat.
+                        The more complex shapes were simply made using blender's built in "curves" add-on.
                     </p>
                     <p>
-                        To solve this problem, I dynamically change which sprite is displayed (front, back, or side)
-                        based on the camera's position and the direction the actors are moving.
-                        You can see a demonstration of this in this
-                        <a class="link"
-                            href="https://www.youtube.com/watch?v=HLnInlFSaIs&list=PLrA6xIQP4_aAhvxUu1hsJf30ciDm0pyPy&index=5"
-                            target="_blank">video</a>.
+                        The model was made without using the sculpt mode at all. There are 2 main reasons for this: I wanted to familiarize myself with the object mode and edit mode of blender. I also wanted to keep the model as simple as possible in a way that makes it easy to animate in the future eventually.
                     </p>
                 </div>
 
                 <!-- IMAGE -->
                 <div class="col-12 col-md-6 order-2 order-md-1">
-                    <img class="group-img img-fluid" src="assets/2D-meets-3D/actors/actors.png" alt="sprite-blueprint">
+                    <iframe class="group-img img-fluid embed-responsive-item" src="https://www.youtube.com/embed/QDKRirv01_s?si=RihZ5YgBlOBvAhl6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
             </div>
@@ -171,39 +162,21 @@
 
                 <!-- TEXT -->
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-1">
-                    <h5>Bringing life to the environment</h5>
+                    <h5>Experimenting with colors</h5>
                     <p>
-                        I used Level Sequences and Niagara systems to add movement to the world.
-                        My goal was to bring life to the environment.
+                        The colors were chosen from a palette of 1024 colors found on the internet. It is the palette on the left of the screen in the video right here.
                     </p>
                     <p>
-                        I learned to use Niagara to create dynamic environmental effects such as the campfire
-                        and the water disturbed by the windmill.
-                        These effects respond to procedural parameters, allowing me to simulate natural movement.
+                        To put colors on the different parts of the models, I made UV islands for each individual part of the model, I then scaled down of the islands to 0 in order and positioned them on top of color palette. This methods allowed me to experiment easily with the colors as I could change the island-points all together to create color variations very easily but keeping the overall harmony. Please take a look at the video to see a demonstration of the process.
                     </p>
                     <p>
-                        Working with Niagara helped me better understand procedural methods by forcing me to control
-                        randomness
-                        in order to reproduce natural phenomena.
-                        I would like to experiment more with VFX in the future and create more complex effects.
-                    </p>
-                    <p>
-                        In this <a class="link" href="https://youtu.be/1SJARxeZ5yg" target="_blank">video</a>,
-                        I demonstrate how I changed the radius of the particle spawn area to give the effect an
-                        overall fire shape.
-                    </p>
-                    <p>
-                        In this <a class="link" href="https://youtu.be/AjAAK8vRxLI" target="_blank">video</a>,
-                        I demonstrate how I modified the color of the particles based on the time since they
-                        spawned,
-                        creating a more natural-looking fire.
+                        I usually have trouble with choosing colors for my artworks, but using a palette definitely helped in the process. It also made me realize the importance of choosing colors with a similar hue. I also took conscience of the fact that using too many colors can decrease the impact that they have. For example, for the red version of the Shisa, I manually changed the skin color to white to make the red of the the other parts pop-out.
                     </p>
                 </div>
 
                 <!-- IMAGE -->
                 <div class="col-12 col-md-6 order-2 order-md-2">
-                    <img class="group-img img-fluid" src="assets/2D-meets-3D/movement/movement-demo.gif"
-                        alt="sprites-screenshot">
+                    <iframe class="group-img img-fluid embed-responsive-item embed-responsive-item" src="https://www.youtube.com/embed/LezUcDs-b00?si=OKXM-mOsPKzvjtd1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
             </div>
