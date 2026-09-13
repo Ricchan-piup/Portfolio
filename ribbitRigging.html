@@ -38,17 +38,23 @@
             <p>
                 Ribbit Rigging is my first complete rigged model coming with 3 keyframe animations.
             </p>
-            My goal was to make an asset that I could use as video game character. Making this project taught me the basics of 3D rigging, and keyframe animation.
-            I purposefully made the mesh of the frog as simple as possible so that I could focus on the rigging, and keyframe animation. That's why I embraced a low-poly, cartoonish style.
+            <p>My goal was to make an asset that I could use as video game character. Making this project taught me the
+                basics of 3D rigging, and keyframe animation.
+                I purposefully made the mesh of the frog as simple as possible so that I could focus on the rigging, and
+                keyframe animation. That's why I embraced a low-poly, cartoonish style.
+            </p>
             <p>
-                The 3D model is downloadable from its <a class="link">Github repository</a>.
+                The 3D model is downloadable from its <a class="link"
+                    href="https://github.com/Ricchan-piup/Ribbit-Rigging">Github repository</a>.
             </p>
         </section>
         <h3>Demonstration</h3>
         <p>
-            Please take a look at the model in different colors down here. You can get
-            more insight on how I made it by checking this
-            <a class="link" href="https://www.youtube.com/playlist?list=PLc87wuQ7K5KE" target="_blank">playlist</a>.
+            The video below showcases the 3 different animations I made myself.
+            The first animation is simply an idle animation, the second one is a jump cycle, and the last could be used
+            to make the frog shoot a laser out of its mouth.
+            This <a class="link" href="https://www.youtube.com/playlist?list=PLc87wuQ7K5KE" target="_blank">playlist</a>
+            provides more insights on how I implemented different parts of this project.
         </p>
         <div class="container text-center">
             <iframe class="embed-responsive-video-100"
@@ -62,31 +68,35 @@
         <section id="process">
             <h3>Process</h3>
             <p>
-                This 3D model is the first one I have ever realized all on my own, so of course it came with its
-                challenges. Here are some of the main ones
-                <a class="link" href="https://github.com/Ricchan-piup/2D-meets-3D" target="_blank">GitHub
-                    repository</a>.
+                Rigging and animating a 3D model without any tutorial was a great experience. I have experimented with a
+                lot of features which made me more familiar with blender. I explain below how I implemented the most
+                important features and the difficulties I encountered doing so.
             </p>
 
             <div class="info-group row g-4 mb-5 align-items-center">
 
                 <!-- TEXT -->
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-1">
-                    <h5 class="mt-5">The concept</h5>
+                    <h5 class="mt-5">The 3D model</h5>
                     <p>
-                        I doodle everyday to generate ideas, right before starting this project, I was in a phase where
-                        I would draw a lot of Shisas. I discovered about Shisas in Summer 2025 during my trip to Okinawa
-                        in Japan. This lion-dog is the guardian of Okinawa, it is told to bring good luck and protect
-                        homes from evil spirits. For this exact reason, statues of Shisas are everywhere
+                        The original motivation for this project was to make a character for a game I am working on
+                        using Unity. I am remaking my other project "Froppy", using 3D assets to learn the pipeline to
+                        import 3D models from blender to Unity.
                     </p>
                     <p>
-                        After deciding I wanted to try to make a Shisa in 3D, I drew even more doodles to decide on a
-                        style. When I finally reached a satisfying design, I drew views of the full-body. One from the
-                        front, back and side.
+                        I wanted to keep it as simple as possible which is why I directly made this frog by "doodling"
+                        on Blender. I used different shapes and combined them in various ways until I found a
+                        combination that was interesting enough. Using separate pieces made it very easy to assign
+                        weight to the bones later, which is a technique I will definitely reuse when prototyping or
+                        making low-poy assets in the future. The colors were chosen using the same technique as in my
+                        other project "Chisa-Shisa"
                     </p>
                     <p>
-                        The 3D model ended up looking pretty different than the sketches, but they still helped me on
-                        deciding which important shapes to use and how to combine them.
+                        The hardest part was probably making the mouth and connecting it to the rest of the head
+                        somehow. I first used a curve with a skin modifier, but the result gave me too many faces and
+                        made it impossible to connect it to the head.
+                        By using a torus and manually selecting the number of faces when instancing it, I managed to
+                        make this funny mouth that fits the low-poly cartoonish style well enough.
                     </p>
                     <p>
                     </p>
@@ -106,21 +116,26 @@
 
                 <!-- TEXT -->
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-2">
-                    <h5>3D Modeling</h5>
+                    <h5>The rig</h5>
                     <p>
-                        The model was made by combining simple shapes together. The order in which the shapes were
-                        assembled is not the same, the video named "Construction" right here should give you an idea of
-                        how the 3D model was realized. I used blender's modifiers to add geometry and add constraints to
-                        keep the eyes stuck to the head surface, and be able to animate them later.
+                        Each separate piece of the model basically has 1 deformation bone corresponding to it. Each bone
+                        controls its piece with a 100% influence.
+                        The only exception is the mouth which needed 8 deformation bones to allow precise control. Using
+                        8 bones for 1 mesh forced me to use the weight paint mode of blender. It was a struggle at
+                        first, but after trial and error I reached a result that was pretty satisfying.
                     </p>
                     <p>
-                        The more complex shapes were simply made using blender's built in "curves" add-on.
+                        To make it easier to animate, I used "control bones". These bones do not directly deform the
+                        mesh, but they can transform other deformation bones that transform the mesh.
+                        The first example of such bones are the inverse kinematic bones (IK bones). When moving the
+                        control bone for one of the leg, the rest of the arm follows in a way that makes sense. It also
+                        makes it possible to move the torso while the legs stay still.
+                        Another example is the control bone of the mouth. That control bone make it easy to open and
+                        close the mouth without losing the flexibility to move each deformation bone individually.
                     </p>
                     <p>
-                        The model was made without using the sculpt mode at all. There are 2 main reasons for this: I
-                        wanted to familiarize myself with the object mode and edit mode of blender. I also wanted to
-                        keep the model as simple as possible in a way that makes it easy to animate in the future
-                        eventually.
+                        The video right here shows how different bones affect the mesh and how they can be use to create
+                        animations.
                     </p>
                 </div>
 
@@ -139,24 +154,33 @@
 
                 <!-- TEXT -->
                 <div class="group-explanations col-12 col-md-6 order-1 order-md-1">
-                    <h5>Experimenting with colors</h5>
+                    <h5>Creating Animations</h5>
                     <p>
-                        The colors were chosen from a palette of 1024 colors found on the internet. It is the palette on
-                        the left of the screen in the video right here.
+                        I used keyframe animation within blender to make 3 different animations. I learned how keyframe
+                        animation works, and different tools that blender provides to make the creation process easier.
                     </p>
                     <p>
-                        To put colors on the different parts of the models, I made UV islands for each individual part
-                        of the model, I then scaled down of the islands to 0 in order and positioned them on top of
-                        color palette. This methods allowed me to experiment easily with the colors as I could change
-                        the island-points all together to create color variations very easily but keeping the overall
-                        harmony. Please take a look at the video to see a demonstration of the process.
+                        It was a matter of trial and error to find what was wrong with my poses at first. Even though
+                        the poses at each frame looked fine individually, the animation didn't look great at first.
+                        It made me realize the importance of exaggerating the poses, and using the right interpolation
+                        mode between different frames. Exponential interpolation works great for explosive movements
+                        such as extending the legs before jumping. Bézier interpolation is better for softer movements.
+                        The biggest challenge was to make the "shooting" animation. I had to make sure the timing was
+                        just right to create the recoil effect. I also added some random chaos to the lips' movement to
+                        give a powerful feeling to whatever is being shot from the mouth.
                     </p>
                     <p>
-                        I usually have trouble with choosing colors for my artworks, but using a palette definitely
-                        helped in the process. It also made me realize the importance of choosing colors with a similar
-                        hue. I also took conscience of the fact that using too many colors can decrease the impact that
-                        they have. For example, for the red version of the Shisa, I manually changed the skin color to
-                        white to make the red of the the other parts pop-out.
+                        At first, I had a lot of trouble when trying to control bones individually without affecting the
+                        rest of the armature. For example fmaking the feet point down or point up, or adding movement to
+                        a precise part of the mouth.
+                        Using the graph editor in blender, I learned to isolate bones I was interested in, and control
+                        them with more precision. I also learned about curve modifier that allows for a procedural
+                        approach in creating movement.
+                    </p>
+                    <p>
+                        The video on the left displays how I used blender's graph editor and curve noise modifier to add
+                        randomness to the shooting animation.
+
                     </p>
                 </div>
 
@@ -176,48 +200,6 @@
             <a class="btn back-home bottom-button" href="index.html">See Another Project</a>
         </div>
     </div>
-
-    <!-- Blueprint carousel -->
-    <!-- <div class="modal fade" id="galleryModal" tabindex="-1">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content bg-dark">
-
-                <div class="modal-body p-0">
-
-                    <div id="modalCarousel" class="carousel slide">
-
-                        <div class="carousel-inner">
-
-                            <div class="carousel-item active">
-                                <img src="assets/2D-meets-3D/blueprints/texture-1.png" class="d-block w-100"
-                                    alt="texture-1-blueprint">
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="assets/2D-meets-3D/blueprints/texture-2.png" class="d-block w-100"
-                                    alt="texture-2-blueprint">
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="assets/2D-meets-3D/blueprints/foliage.png" class="d-block w-100"
-                                    alt="foliage-blueprint">
-                            </div>
-
-                        </div>
-
-                        <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel"
-                            data-bs-slide="prev" aria-label="previous"></button>
-
-                        <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel"
-                            data-bs-slide="next" aria-label="next"></button>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
