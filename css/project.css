@@ -68,11 +68,36 @@ h1 {
     border: none;
 }
 
+.embed-responsive-video-100 {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.embed-responsive-video-80 {
+    aspect-ratio: 16/9;
+    width: 80%;
+    height: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
 .group-img {
     display: block;
     width: 100%;
     object-fit: fill;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 
