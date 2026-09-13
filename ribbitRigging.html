@@ -38,10 +38,10 @@
             <p>
                 Ribbit Rigging is my first complete rigged model coming with 3 keyframe animations.
             </p>
-            <p>My goal was to make an asset that I could use as video game character. Making this project taught me the
+            <p>My goal was to make an asset that I could use as a video game character. Making this project taught me the
                 basics of 3D rigging, and keyframe animation.
                 I purposefully made the mesh of the frog as simple as possible so that I could focus on the rigging, and
-                keyframe animation. That's why I embraced a low-poly, cartoonish style.
+                keyframe animation. That is why I embraced a low-poly, cartoonish style.
             </p>
             <p>
                 The 3D model is downloadable from its <a class="link"
@@ -50,10 +50,10 @@
         </section>
         <h3>Demonstration</h3>
         <p>
-            The video below showcases the 3 different animations I made myself.
+            The video below showcases the model, and the 3 different animations I made using my own rig.
             The first animation is simply an idle animation, the second one is a jump cycle, and the last could be used
-            to make the frog shoot a laser out of its mouth.
-            This <a class="link" href="https://www.youtube.com/playlist?list=PLc87wuQ7K5KE" target="_blank">playlist</a>
+            to make the frog shoot some sort of laser out of its mouth.
+            This <a class="link" href="https://www.youtube.com/playlist?list=PLBBUT2L9PmPk" target="_blank">playlist</a>
             provides more insights on how I implemented different parts of this project.
         </p>
         <div class="container text-center">
@@ -68,9 +68,9 @@
         <section id="process">
             <h3>Process</h3>
             <p>
-                Rigging and animating a 3D model without any tutorial was a great experience. I have experimented with a
+                Rigging and animating a 3D model without any tutorial was actually very fun. I have experimented with a
                 lot of features which made me more familiar with blender. I explain below how I implemented the most
-                important features and the difficulties I encountered doing so.
+                important features and the difficulties I encountered in doing so.
             </p>
 
             <div class="info-group row g-4 mb-5 align-items-center">
@@ -87,16 +87,16 @@
                         I wanted to keep it as simple as possible which is why I directly made this frog by "doodling"
                         on Blender. I used different shapes and combined them in various ways until I found a
                         combination that was interesting enough. Using separate pieces made it very easy to assign
-                        weight to the bones later, which is a technique I will definitely reuse when prototyping or
+                        weight to the bones later, which is a technique I will definitely reuse when prototyping, or
                         making low-poy assets in the future. The colors were chosen using the same technique as in my
                         other project "Chisa-Shisa"
                     </p>
                     <p>
                         The hardest part was probably making the mouth and connecting it to the rest of the head
                         somehow. I first used a curve with a skin modifier, but the result gave me too many faces and
-                        made it impossible to connect it to the head.
+                        made it impossible to connect it to the head correctly.
                         By using a torus and manually selecting the number of faces when instancing it, I managed to
-                        make this funny mouth that fits the low-poly cartoonish style well enough.
+                        make this funny mouth that fits the low-poly cartoonish style well enough, and connect it to the rest of the head.
                     </p>
                     <p>
                     </p>
@@ -125,12 +125,12 @@
                         first, but after trial and error I reached a result that was pretty satisfying.
                     </p>
                     <p>
-                        To make it easier to animate, I used "control bones". These bones do not directly deform the
-                        mesh, but they can transform other deformation bones that transform the mesh.
-                        The first example of such bones are the inverse kinematic bones (IK bones). When moving the
+                        To make it easier to animate the model, I created "control bones". These bones do not directly deform the
+                        mesh, but they can move and transform other deformation bones that transform the mesh in return.
+                        The most obvious example of such bones are the inverse kinematic bones (IK bones). When moving the
                         control bone for one of the leg, the rest of the arm follows in a way that makes sense. It also
-                        makes it possible to move the torso while the legs stay still.
-                        Another example is the control bone of the mouth. That control bone make it easy to open and
+                        makes it possible to move the torso while keeping the legs in the same place.
+                        Another example is the control bone of the mouth. That control bone makes it easier to open and
                         close the mouth without losing the flexibility to move each deformation bone individually.
                     </p>
                     <p>
@@ -170,17 +170,16 @@
                         give a powerful feeling to whatever is being shot from the mouth.
                     </p>
                     <p>
-                        At first, I had a lot of trouble when trying to control bones individually without affecting the
-                        rest of the armature. For example fmaking the feet point down or point up, or adding movement to
+                        At first, I had a lot of trouble when trying to move individual bones without affecting the
+                        rest of the armature. For example, making the feet point down or point up, or adding movement to
                         a precise part of the mouth.
                         Using the graph editor in blender, I learned to isolate bones I was interested in, and control
-                        them with more precision. I also learned about curve modifier that allows for a procedural
-                        approach in creating movement.
+                        them with more precision. I also learned about curve modifier that offer a procedural
+                        approach to create movement.
                     </p>
                     <p>
-                        The video on the left displays how I used blender's graph editor and curve noise modifier to add
+                        The video on the left displays how I used blender's graph editor and noise curve modifier to add
                         randomness to the shooting animation.
-
                     </p>
                 </div>
 
